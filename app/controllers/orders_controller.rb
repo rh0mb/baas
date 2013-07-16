@@ -24,6 +24,13 @@ class OrdersController < ApplicationController
     end
   end
 
+  def product
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @orders }
+    end
+  end
+
   # GET /orders/1
   # GET /orders/1.json
   def show

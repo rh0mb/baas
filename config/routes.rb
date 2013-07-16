@@ -7,6 +7,7 @@ Bianiapp::Application.routes.draw do
 
   get "/publicquoter" => "orders#pub_quoter"
   get "/calculator" => "orders#calculator"
+  get "/product" => "orders#product"
 
 
   # The priority is based upon order of creation:
