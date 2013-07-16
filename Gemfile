@@ -7,6 +7,17 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'bootstrap-sass'
+gem 'devise'
+gem 'font-awesome-sass-rails'
+
+group :development, :test do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem "pg"
+	gem 'rack-google-analytics', :require => 'rack/google-analytics'
+end
 
 
 # Gems used only for assets and not required

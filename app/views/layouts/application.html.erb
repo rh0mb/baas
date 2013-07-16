@@ -1,15 +1,240 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <title>Bianiapp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
-<%= yield %>
+  <!--=== Top ===-->    
+<div class="top">
+    <div class="container">         
+        <ul class="loginbar pull-right">
+            <li><i class="icon-globe"></i><a>Languages <i class="icon-sort-up"></i></a>
+                <ul class="nav-list">
+                    <li class="active"><a href="#">English</a> <i class="icon-ok"></i></li>
+                    <li><a href="#">Spanish</a></li>
+                    <li><a href="#">Russian</a></li>
+                    <li><a href="#">German</a></li>
+                </ul>
+            </li>   
+            <li class="devider">&nbsp;</li>
+            <li><a href="page_faq.html" class="login-btn">Help</a></li>  
+            <li class="devider">&nbsp;</li>
+            <li><a href="page_login.html" class="login-btn">Login</a></li>   
+        </ul>
+    </div>      
+</div><!--/top-->
+<!--=== End Top ===-->    
 
-</body>
+<!--=== Header ===-->
+<div class="header">               
+    <div class="container"> 
+        <!-- Logo -->       
+        <div class="logo">                                             
+            <%= image_tag("logo1-default.png", :id => "logo-header", :alt => "logo") %>
+        </div><!-- /logo -->        
+                                    
+        <!-- Menu -->       
+        <div class="navbar">                                
+            <div class="navbar-inner">                                  
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a><!-- /nav-collapse -->                                  
+                <div class="nav-collapse collapse">                                     
+                    <ul class="nav top-2">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Producto
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Sistema Modular</a></li>
+                                <li><a href="page_home.html">Distribuidores</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Servicios
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="page_about.html">About Us</a></li>
+                                <li><a href="page_services.html">Services</a></li>
+                                <li><a href="page_pricing.html">Pricing</a></li>
+                                <li><a href="page_coming_soon.html">Coming Soon</a></li>
+                                <li><a href="page_faq.html">FAQs</a></li>
+                                <li><a href="page_search.html">Search Result</a></li>
+                                <li><a href="page_gallery.html">Gallery</a></li>
+                                <li><a href="page_registration.html">Registration</a></li>
+                                <li><a href="page_login.html">Login</a></li>
+                                <li><a href="page_404.html">404</a></li>
+                                <li><a href="page_clients.html">Clients</a></li>
+                                <li><a href="page_privacy.html">Privacy Policy</a></li>
+                                <li><a href="page_terms.html">Terms of Service</a></li>
+                                <li><a href="page_column_left.html">2 Columns (Left)</a></li>
+                                <li><a href="page_column_right.html">2 Columns (Right)</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galeria
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="portfolio_item.html">Portfolio Item</a></li>
+                                <li><a href="portfolio_2columns.html">Portfolio 2 Columns</a></li>
+                                <li><a href="portfolio_3columns.html">Portfolio 3 Columns</a></li>
+                                <li><a href="portfolio_4columns.html">Portfolio 4 Columns</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="page_contact.html">Contact Default</a></li>
+                                <li><a href="page_contact1.html">Contact Boxed Map</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+                    </ul>
+                    <div class="search-open">
+                        <div class="input-append">
+                            <form>
+                                <input type="text" class="span3" placeholder="Search" />
+                                <button type="submit" class="btn-u">Go</button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- /nav-collapse -->                                
+            </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->                          
+    </div><!-- /container -->               
+</div><!--/header -->      
+<!--=== End Header ===-->
+
+
+
+		
+
+        </div> <!-- /.container -->
+      <div class="container">
+        <% flash.each do |type, message| %>
+        <div class="alert <%= flash_class type %>">
+          <button class="close" data-dismiss="alert">x</button>
+          <%= message %>
+        </div>
+        <% end %>
+       </div>
+    </div><!-- /.navbar-wrapper -->
+    <%= yield %>
+
+
+
+
+
+
+
+<!--=== Footer ===-->
+<div class="footer">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span4">
+                <!-- About -->
+            <div class="headline"><h3>About</h3></div>  
+        <p class="margin-bottom-25">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>  
+
+              <!-- Monthly Newsletter -->
+            <div class="headline"><h3>Monthly Newsletter</h3></div> 
+        <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+        <form class="form-inline">
+          <div class="input-append">
+            <input type="text" placeholder="Email Address" class="input-medium">
+            <button class="btn-u">Subscribe</button>
+          </div>
+        </form>             
+      </div><!--/span4--> 
+      
+      <div class="span4">
+                <div class="posts">
+                    <div class="headline"><h3>Recent Blog Entries</h3></div>
+                    <dl class="dl-horizontal">
+                        <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                    <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                    <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                        </dd>
+                    </dl>
+                </div>
+      </div><!--/span4-->
+
+      <div class="span4">
+              <!-- Monthly Newsletter -->
+            <div class="headline"><h3>Contacto</h3></div> 
+                <address>
+          Morelos 43 (Eje 6) <br />
+          Col. María del Carmen <br />
+          México, DF <br />
+          Tel: +52 (55) 5243 8935 <br />
+          
+          Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+                </address>
+
+                <!-- Stay Connected -->
+            <div class="headline"><h3>Stay Connected</h3></div> 
+                <ul class="social-icons">
+                    <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+                    <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+                    <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+                    <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+                    <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+                    <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+                    <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+                </ul>
+      </div><!--/span4-->
+    </div><!--/row-fluid--> 
+  </div><!--/container--> 
+</div><!--/footer-->  
+<!--=== End Footer ===-->
+
+<!--=== Copyright ===-->
+<div class="copyright">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span8">           
+              <p>2013 &copy; Biani. Todos los derechos reservados. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+      <div class="span4"> 
+        <%= image_tag("logo2-default.png", :id => "logo-footer", :class => "pull-right", :alt => "logo") %>
+      </div>
+    </div><!--/row-fluid-->
+  </div><!--/container--> 
+</div><!--/copyright--> 
+<!--=== End Copyright ===-->
+
+  </body>
 </html>
+
+
+
+

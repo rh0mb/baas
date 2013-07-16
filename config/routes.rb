@@ -1,7 +1,12 @@
 Bianiapp::Application.routes.draw do
+  devise_for :users
+
   resources :orders
 
+  root :to => "orders#index"
+
   get "/publicquoter" => "orders#pub_quoter"
+  get "/calculator" => "orders#calculator"
 
 
   # The priority is based upon order of creation:

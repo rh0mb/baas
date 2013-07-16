@@ -39,8 +39,8 @@ var pricemxn;
 
 
 
-function cotizar() {
-  var calc = document.getElementById('ecot');
+function calculate() {
+  var calc = document.getElementById('ecalc');
   var h = calc.h.value * 100; //convert to cm
   var b = calc.b.value * 100; //convert to cm
 
@@ -52,10 +52,6 @@ function cotizar() {
 
   
   riego = ezflow + orbitController + electroValve + filtro;
-
-
-
-
   
   pricemxn = (yeehhm75 + riego)*(100+profit)/100;
 

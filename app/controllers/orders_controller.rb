@@ -11,8 +11,13 @@ class OrdersController < ApplicationController
   end
 
   def pub_quoter
-    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @orders }
+    end
+  end
 
+  def calculator
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }

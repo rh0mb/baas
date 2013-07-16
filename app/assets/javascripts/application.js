@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-1.8.2.min
+//= require modernizr.custom
 //= require bootstrap
+//= require jquery.flexslider-min
+//= require modernizr
+//= require jquery.cslider
+//= require back-to-top
+//= require app
+//= require index
 //= require_tree .
