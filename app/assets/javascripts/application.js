@@ -19,6 +19,7 @@
 //= require modernizr
 //= require jquery.cslider
 //= require back-to-top
+//= require jquery.fancybox.pack
 //= require app
 //= require index
 //= require_tree .
