@@ -41,7 +41,7 @@
   <div class="container"> 
     <!-- Logo -->       
     <div class="logo">                                             
-        <%= image_tag("logo1-default.png", :id => "logo-header", :alt => "logo") %>
+        <a href="<%= '/' %>"><%= image_tag("logo1-default.png", :id => "logo-header", :alt => "logo") %></a>
     </div><!-- /logo -->        
                                 
     <!-- Menu -->       
@@ -59,31 +59,31 @@
                             <b class="caret"></b>                            
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="index.html">Sistema Modular</a></li>
-                            <li><a href="page_home.html">Distribuidores</a></li>
+                            <li><a href="<%= '/product#modular' %>">Sistema Modular</a></li>
+                            <li><a href="<%= '/product#instal' %>">Fácil Instalación</a></li>
+                            <li><a href="<%= '/product#mant' %>">Mantenimiento Mínimo</a></li>
                         </ul>
                         <b class="caret-out"></b>                        
                     </li>
                     <li>
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Servicios
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">A quien
                             <b class="caret"></b>                            
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="page_about.html">About Us</a></li>
-                            <li><a href="page_services.html">Services</a></li>
-                            <li><a href="page_pricing.html">Pricing</a></li>
-                            <li><a href="page_coming_soon.html">Coming Soon</a></li>
-                            <li><a href="page_faq.html">FAQs</a></li>
-                            <li><a href="page_search.html">Search Result</a></li>
-                            <li><a href="page_gallery.html">Gallery</a></li>
-                            <li><a href="page_registration.html">Registration</a></li>
-                            <li><a href="page_login.html">Login</a></li>
-                            <li><a href="page_404.html">404</a></li>
-                            <li><a href="page_clients.html">Clients</a></li>
-                            <li><a href="page_privacy.html">Privacy Policy</a></li>
-                            <li><a href="page_terms.html">Terms of Service</a></li>
-                            <li><a href="page_column_left.html">2 Columns (Left)</a></li>
-                            <li><a href="page_column_right.html">2 Columns (Right)</a></li>
+                            <li><a href="<%= '/persona#arch' %>">Arquitectos</a></li>
+                            <li><a href="<%= '/persona#di' %>">Diseñadores de Interiores</a></li>
+                            <li><a href="<%= '/persona#ent' %>">Emprendedores</a></li>
+                            <li><a href="<%= '/persona#nature' %>">Amantes de la Naturaleza</a></li>
+                        </ul>
+                        <b class="caret-out"></b>                        
+                    </li>
+                    <li>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Tienda
+                            <b class="caret"></b>                            
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<%= '/publicquoter' %>">Precios</a></li>
+                            <li><a href="<%= '/persona#di' %>">Distribuidores</a></li>
                         </ul>
                         <b class="caret-out"></b>                        
                     </li>

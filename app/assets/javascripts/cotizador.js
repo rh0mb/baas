@@ -1,39 +1,37 @@
 // Cost variables, no decimals, multiply by 100
 
-// Plastic
+// Modules
 var priceyeehhm75 = 2400;
 var priceteehhh75 = 2456;
 var priceabra75 = 690;
 var pricetapa75 = 754;
 var pricetubo75 = 13824; //6 meters
-var pricereduct75to50 = 847;
-var pricereduct50to40 = 470;
+
+var pricedripper4gph = 1000;
+var pricevinyl = 700 // per meter
+var pricedripline = 35000;// ab
+var pricedrains = 300; // the drains that preven the sustrate from going down to the drain tube
+var pricesustrato = 250; //substrate per yee
+var pricemodulebox = 6000; // one meter per box
+var pricesustratepack = 1000; // calculated for meter, using heavy plastic and sturdy tape.
+var pricehandlabour = 4000;
 
 // Irrigation
 var ezflow = 250000;
-var backflowvalve = 20000;
-var orbitController = 62000;
-var electroValve = 33000;
-var filtro = 35000; 
-var pricevinyl = 700 // per meter
-var pricedripper4gph = 1000;
-var pricedripline = 0;// ab
-
-//Extras
-var pricesustrato = 300; //substrate per yee
+var pricereduct75to50 = 847;
+var pricereduct50to40 = 470;
+var pricebackflowvalve = 15000;
+var priceorbitController = 62000;
+var priceelectroValve = 33000;
+var pricefilter = 35000; 
+var pricevinyltohose = 4052;
+var priceconnectors = 10000;
 var pricenutes = 90000; //per 25kg bag
-var pricedrains = 500; // the drains that preven the sustrate from going down to the drain tube
+var pricenutebag = 700;
+var priceriegobox = 4000; // one per wall, includes the irrigatio stuff
 
-// Assembly
-// Considered in the salary of a hany man
 
-// Packaging - ESTIMATED CORROBORATE!!
-var pricemodulebox = 6000; // one meter per box
-var priceriegobox = 2500; // one per wall, includes the irrigatio stuff
-var priceextrabox = 1500; // for nutes and anything else
-var pricenutebag = 600;
-var pricesustratepack = 1000; // calculated for meter, using heavy plastic and sturdy tape.
-// SUSTRATE SHOULD TRAVEL INSIDE THE TUBES
+var profit = 36; // as percentage
 
 
 // Calculated for 80 meters per month
@@ -42,7 +40,7 @@ var office = 8800; //per meter
 var wages = 33800; //per meter
 var fixed;
 
-var profit = 20 // as percentage
+
 var pricemxn;
 
 
@@ -52,13 +50,20 @@ function cotizar() {
   var h = calc.h.value * 100; //convert to cm
   var b = calc.b.value * 100; //convert to cm
 
-  var a = (h*b);
+  var a = (h*b); // this value is in square cm
 
-  calc.a.value = a/10000;
+  calc.a.value = a/10000; // display de area in square meters
 
 
+  // Calculating number of plastic parts for modules
 
-  // Calculating number of plastic parts and cost
+  // Base
+
+  var baseyeehhm75 = (b / 20) * 25;
+  
+  
+
+
   var yeehhm75 = (((h - 30 - 10)/16) * (b/20)) * priceyeehhm75; // calculate the number of yee hhm needed and x price
   var teehhh75 = (b/20) * priceteehhh75; 
   var abra75 =  ((h/100)*2) * priceabra75;
