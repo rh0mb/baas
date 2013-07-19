@@ -1,0 +1,74 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+  <div class="container">
+        <h1 class="color-green pull-left">Contáctanos</h1>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container">   
+  <div class="row-fluid">
+    <div class="span9">
+      <!-- <div id="map" class="map map-box map-box-space margin-bottom-40">
+      </div> -->
+      <p>¿Tienes alguna duda o sugerencia?</p><br />
+        <%= form_tag dispatch_email_path, method: :post do %>
+        <label><%= label_tag "user_info[name]", "Nombre:", :input_html => {:style => 'width: 100%'} %></label>
+        <%= text_field_tag("user_info[name]", value = nil, options = {:class => "span7"}) %>
+
+        <label><%= label_tag "user_info[email]", "Correo:" %></label>
+        <%= text_field_tag("user_info[email]", value = nil, options = {:class => "span7"}) %>
+
+        <label><%= label_tag "user_info[message]", "Mensaje:" %></label>
+        <%= text_area_tag("user_info[message]", value = nil, options = {:rows => 8, :class => "span10"}) %>
+        
+        <p><%= submit_tag "Enviar", class: "btn-u"%></p>
+        <% end %>
+     
+    </div><!--/span9-->
+
+
+
+
+    <div class="span3">
+            <!-- Contacts -->
+            <div class="headline"><h3>Contacts</h3></div>
+            <ul class="unstyled who margin-bottom-20">
+                <li><a href="#"><i class="icon-home"></i>Morelos 43 (Eje 6), Col. María del Carmen, Mexico, DF</a></li>
+                <li><a href="#"><i class="icon-phone-sign"></i>+52 (55) 5243 8935</a></li>
+                <li><a href="#"><i class="icon-globe"></i>http://biani.heroku.com</a></li>
+            </ul>
+
+            <!-- Business Hours -->
+            <div class="headline"><h3>Business Hours</h3></div>
+            <ul class="unstyled">
+                <li><strong>Monday-Friday:</strong> 10am to 8pm</li>
+                <li><strong>Saturday:</strong> Closed</li>
+                <li><strong>Sunday:</strong> Closed</li>
+            </ul>
+
+            <!-- Why we are? -->
+            <div class="headline"><h3>Why we are?</h3></div>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+            <ul class="unstyled">
+                <li><i class="icon-ok color-green"></i> Odio dignissimos ducimus</li>
+                <li><i class="icon-ok color-green"></i> Blanditiis praesentium volup</li>
+                <li><i class="icon-ok color-green"></i> Eos et accusamus</li>
+            </ul>
+        </div><!--/span3-->        
+    </div><!--/row-fluid-->        
+</div><!--/container-->   
+<!--=== End Content Part ===-->
+
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initSliders();                
+        Contact.initMap();        
+    });
+</script>

@@ -22,7 +22,7 @@
       </li>
       <% if user_signed_in? %>
         <li class="devider">&nbsp;</li>
-        <li><%= link_to current_user.profile_name, profile_path(current_user.profile_name) %></li>
+        <li><%= link_to current_user.email %></li>
         <li class="devider">&nbsp;</li>
         <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> 
       <% else %>
@@ -131,7 +131,7 @@
 
 		
 
-        </div> <!-- /.container -->
+        
       <div class="container">
         <% flash.each do |type, message| %>
         <div class="alert <%= flash_class type %>">
@@ -140,7 +140,10 @@
         </div>
         <% end %>
        </div>
-    </div><!-- /.navbar-wrapper -->
+
+
+
+    
     <%= yield %>
 
 

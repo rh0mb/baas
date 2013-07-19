@@ -18,8 +18,10 @@
 //= require jquery.flexslider-min
 //= require modernizr
 //= require jquery.cslider
+//= require gmap
 //= require back-to-top
 //= require jquery.fancybox.pack
 //= require app
+//= require contact
 //= require index
 //= require_tree .

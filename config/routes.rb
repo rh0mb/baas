@@ -1,4 +1,5 @@
 Bianiapp::Application.routes.draw do
+  
   devise_for :users
 
   resources :orders
@@ -9,6 +10,11 @@ Bianiapp::Application.routes.draw do
   get "/calculator" => "orders#calculator"
   get "/product" => "orders#product"
   get "/persona" => "orders#persona"
+
+  match "contact", to: "contact#contact", as: "contact"
+  match "dispatch_email", to: "contact#dispatch_email", as: "dispatch_email", method: :post
+
+  
 
 
   # The priority is based upon order of creation:

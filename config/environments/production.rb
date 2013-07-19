@@ -61,7 +61,25 @@ Bianiapp::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.gem 'rack-google-analytics', :lib => 'rack/google-analytics'
+  config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-40054339-1'
+
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.action_mailer.default_url_options = { :host => 'biani.herokuapp.com' }
+
+  ActionMailer::Base.smtp_settings = {
+    :port =>           '587',
+    :address =>        'smtp.mandrillapp.com',
+    :user_name =>      ENV['MANDRILL_USERNAME'],
+    :password =>       ENV['MANDRILL_APIKEY'],
+    :domain =>         'biani.herokuapp.com',  # :domain => 'www.d20.org.mx' 
+    :authentication => :plain, 
+    :enable_starttls_auto => true 
+  }
+
+  ActionMailer::Base.delivery_method = :smtp
+
+
 end
