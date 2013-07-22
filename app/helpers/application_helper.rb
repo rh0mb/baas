@@ -1,4 +1,5 @@
 module ApplicationHelper
+	require 'open-uri'
 
 	def flash_class(type)
 		case type
