@@ -6,13 +6,16 @@ Bianiapp::Application.routes.draw do
 
   root :to => "orders#index"
 
-  get "/publicquoter" => "orders#pub_quoter"
   get "/calculator" => "orders#calculator"
   get "/product" => "orders#product"
   get "/persona" => "orders#persona"
 
   match "contact", to: "contact#contact", as: "contact"
   match "dispatch_email", to: "contact#dispatch_email", as: "dispatch_email", method: :post
+
+  match "invoice", to: "contact#invoice", as: "invoice"
+  match "invoicer_email", to: "contact#invoicer_email", as: "invoicer_email", method: :post
+
 
   
 

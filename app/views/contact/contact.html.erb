@@ -22,6 +22,9 @@
 
         <label><%= label_tag "user_info[message]", "Mensaje:" %></label>
         <%= text_area_tag("user_info[message]", value = nil, options = {:rows => 8, :class => "span10"}) %>
+
+        <%= hidden_field "user_info[nickname]", "Seudonimo:" %> <!-- Anti spam, only bots fill this field -->
+        <%= hidden_field_tag "user_info[nickname]"  %><br />
         
         <p><%= submit_tag "Enviar", class: "btn-u"%></p>
         <% end %>

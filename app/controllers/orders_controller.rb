@@ -13,18 +13,6 @@ require 'open-uri'
     end
   end
 
-  def pub_quoter
-    url = "http://portal.banamex.com.mx/c719_004/economiaFinanzas/es/home?xhost=http://www.banamex.com/"
-    doc = Nokogiri::HTML(open(url))
-    data_array = doc.css("td")
-    @dolar = data_array[4].text.gsub(/\s+/, "")
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @orders }
-    end
-  end
-
   def calculator
     respond_to do |format|
       format.html # index.html.erb

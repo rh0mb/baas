@@ -61,6 +61,14 @@ function cotizar() {
     calc.priceMUsd.value = format2((priceMxn / usd / 100) / (area / 10000), "$");
 
     screen_text();
+    document.getElementById("invoicer").className = "span6";
+
+
+    document.getElementById('base').value = base / 100;
+    document.getElementById('height').value = height / 100;
+    document.getElementById('area').value = area / 10000;
+    document.getElementById('priceMxn').value = format2(priceMxn / 100, "$");
+
   }
 
   return false;
@@ -85,6 +93,11 @@ function screen_text() {
   document.getElementById("box").innerHTML = '*El precio incluye: Sistema de riego automático, los módulos necesarios ';
   document.getElementById("box2").innerHTML = '*El precio NO incluye: Envío, instalación, plantas';
 }
+
+
+
+
+
 
 
 function validateFormOnSubmit(theForm) {
