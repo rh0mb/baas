@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'font-awesome-sass-rails'
+gem 'nokogiri'
 
 group :development, :test do
 	gem 'sqlite3'
