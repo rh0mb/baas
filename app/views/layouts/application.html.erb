@@ -14,19 +14,19 @@
 <div class="top">
   <div class="container">         
     <ul class="loginbar pull-right">
-      <li><i class="icon-globe"></i><a>Languages <i class="icon-sort-up"></i></a>
+      <!-- <li><i class="icon-globe"></i><a>Languages <i class="icon-sort-up"></i></a>
         <ul class="nav-list">
           <li class="active"><a href="#">English</a> <i class="icon-ok"></i></li>
           <li><a href="#">Spanish</a></li>
         </ul>
-      </li>
+      </li> -->
       <% if user_signed_in? %>
-        <li class="devider">&nbsp;</li>
+        <!-- <li class="devider">&nbsp;</li> -->
         <li><%= link_to current_user.email %></li>
         <li class="devider">&nbsp;</li>
         <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> 
       <% else %>
-        <li class="devider">&nbsp;</li>
+        <!-- <li class="devider">&nbsp;</li> -->
         <li><%= link_to "Regístrate", new_user_registration_path %></li>  
         <li class="devider">&nbsp;</li>
         <li><%= link_to "Ingresar", new_user_session_path %></li>
@@ -87,7 +87,7 @@
                         </ul>
                         <b class="caret-out"></b>                        
                     </li>
-                    <li>
+                   <!--  <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galeria
                             <b class="caret"></b>                            
                         </a>
@@ -99,7 +99,7 @@
                             <li><a href="portfolio_4columns.html">Portfolio 4 Columns</a></li>
                         </ul>
                         <b class="caret-out"></b>                        
-                    </li>
+                    </li> -->
                     <li>
                       <a href="<%= '/contact' %>">Contacto                        
                       </a>                    
@@ -121,98 +121,50 @@
 </div><!--/header -->      
 <!--=== End Header ===-->
 
+<!--=== Body ===-->
+<div class="container">
+  <% flash.each do |type, message| %>
+  <div class="alert <%= flash_class type %>">
+    <button class="close" data-dismiss="alert">x</button>
+    <%= message %>
+  </div>
+  <% end %>
+</div>
 
+<%= yield %>
 
-		
-
-        
-      <div class="container">
-        <% flash.each do |type, message| %>
-        <div class="alert <%= flash_class type %>">
-          <button class="close" data-dismiss="alert">x</button>
-          <%= message %>
-        </div>
-        <% end %>
-       </div>
-
-
-
-    
-    <%= yield %>
-
-
-
-
-
-
+<!--=== End Body ===-->
 
 <!--=== Footer ===-->
 <div class="footer">
   <div class="container">
     <div class="row-fluid">
       <div class="span4">
-                <!-- About -->
-            <div class="headline"><h3>About</h3></div>  
-        <p class="margin-bottom-25">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>  
-
-              <!-- Monthly Newsletter -->
-            <div class="headline"><h3>Monthly Newsletter</h3></div> 
-        <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
-        <form class="form-inline">
-          <div class="input-append">
-            <input type="text" placeholder="Email Address" class="input-medium">
-            <button class="btn-u">Subscribe</button>
-          </div>
-        </form>             
+        <div class="headline"><h3>About</h3></div>  
+          <p class="margin-bottom-25">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>  
       </div><!--/span4--> 
-      
+    
       <div class="span4">
-                <div class="posts">
-                    <div class="headline"><h3>Recent Blog Entries</h3></div>
-                    <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                        </dd>
-                    </dl>
-                </div>
+        <div class="headline"><h3>Síguenos</h3></div> 
+          <ul class="social-icons">
+              <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+              <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+              <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+              <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+              <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+              <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+              <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+          </ul>
       </div><!--/span4-->
-
       <div class="span4">
-              <!-- Monthly Newsletter -->
-            <div class="headline"><h3>Contacto</h3></div> 
-                <address>
-          Morelos 43 (Eje 6) <br />
-          Col. María del Carmen <br />
-          México, DF <br />
-          Tel: +52 (55) 5243 8935 <br />
-          
-          Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
-                </address>
-
-                <!-- Stay Connected -->
-            <div class="headline"><h3>Stay Connected</h3></div> 
-                <ul class="social-icons">
-                    <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
-                    <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
-                    <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
-                    <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
-                    <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
-                    <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
-                    <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
-                </ul>
+        <div class="headline"><h3>Contacto</h3></div> 
+          <address>
+            Morelos 43 (Eje 6) <br />
+            Col. María del Carmen <br />
+            México, DF <br />
+            Tel: +52 (55) 5243 8935 <br />
+            <!-- Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a> -->
+          </address>   
       </div><!--/span4-->
     </div><!--/row-fluid--> 
   </div><!--/container--> 
@@ -224,7 +176,7 @@
   <div class="container">
     <div class="row-fluid">
       <div class="span8">           
-              <p>2013 &copy; Biani. Todos los derechos reservados. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+              <p>2013 &copy; Biani. Todos los derechos reservados. <!-- <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> --></p>
       </div>
       <div class="span4"> 
         <%= image_tag("logo2-default.png", :id => "logo-footer", :class => "pull-right", :alt => "logo") %>
