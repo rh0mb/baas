@@ -9,6 +9,7 @@ Bianiapp::Application.routes.draw do
   get "/calculator" => "orders#calculator"
   get "/product" => "orders#product"
   get "/persona" => "orders#persona"
+  get "/wall" => "orders#wall"
 
   match "contact", to: "contact#contact", as: "contact"
   match "dispatch_email", to: "contact#dispatch_email", as: "dispatch_email", method: :post
