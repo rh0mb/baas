@@ -9,6 +9,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'font-awesome-sass-rails'
 gem 'nokogiri'
+gem 'newrelic_rpm'
 
 group :development, :test do
 	gem 'sqlite3'
