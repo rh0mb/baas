@@ -90,8 +90,8 @@ function format2(n, currency) {
 }
 
 function screen_text() {
-  document.getElementById("box").innerHTML = '*El precio incluye: Sistema de riego automático, los módulos necesarios ';
-  document.getElementById("box2").innerHTML = '*El precio NO incluye: Envío, instalación, plantas';
+  document.getElementById("box").innerHTML = '*El precio incluye: Módulos Biani, sustrato y sistema de riego automático.';
+  document.getElementById("box2").innerHTML = '*El precio NO incluye: Envío, instalación, plantas.';
 }
 
 

@@ -27,6 +27,10 @@ p, a, li {
 	line-height:1.6; 
 }
 
+.white-li > li {
+	color: white;
+}
+
 a,
 a:focus, 
 a:hover, 
